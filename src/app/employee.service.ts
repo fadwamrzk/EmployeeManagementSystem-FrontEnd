@@ -28,7 +28,8 @@ export class EmployeeService {
   }
 
   public deleteEmployee(employeeId: number) :Observable<void>
-  {
-    return this.http.delete<void>('http://localhost:8080/employee/delete/${employeeId}');
+  {  const url = `http://localhost:8080/employee/delete/${employeeId}`;
+  return this.http.delete<void>(url);
+   
   }
 }
