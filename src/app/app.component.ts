@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   public employees: Employee[] = [];
   public editEmployee!: Employee | null ;
   public deleteEmployee!: Employee | null ;
+ // public key!: string;
   constructor (private employeeService: EmployeeService){}
 
   ngOnInit() {
