@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private apiServerUrl = "http://localhost:8080";
+  //private apiServerUrl = "http://localhost:8080";
   
   constructor(private http: HttpClient) { }
   
@@ -28,8 +28,8 @@ export class EmployeeService {
   }
 
   public deleteEmployee(employeeId: number) :Observable<void>
-  {  const url = `http://localhost:8080/employee/delete/${employeeId}`;
-  return this.http.delete<void>(url);
+  {  
+  return this.http.delete<void>(`http://localhost:8080/employee/delete/${employeeId}`);
    
   }
 }
